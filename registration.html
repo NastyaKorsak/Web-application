@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8" >
+     <link rel="stylesheet" href="css/style.css" type="text/css">
+     <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="js/main.js"></script>
+     <title>Registration</title>
+</head>
+<body>
+<div class="container">
+	<img src="img/ik.png">
+	<form>
+	<div class="dws-input">
+		<input type="text" name="username" minlength="2" placeholder="Имя" required>
+	</div>
+		<div class="dws-inputmail">
+		<input type="text" name="username" placeholder="E-mail" required>
+	</div>
+	<div class="dws-input">
+		<input type="password" name="password" placeholder="Введите пароль" required>
+	</div>
+	<div class="dws-input">
+		<input type="password" name="password_2" placeholder="Повторите пароль" required>
+	</div>
+
+	<?php 
+	if( $data['password_2'] != $data['password'] ) {
+     $errors[] = 'Повторный пароль введен не верно!';
+}
+	 ?>
+
+	 <a href="successful.html" class="dws-submit" type="submit" name="submit">Отправить</a>
+		<br />
+		<br />
+		<br />
+		<a href="index.html">Войти / </a>
+		<a href="#">Восстановить пароль</a>
+			<div class="social">
+	<i class="fa fa-vk" aria-hidden="true"></i>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+	<i class="fa fa-facebook" aria-hidden="true"></i>
+	<i class="fa fa-google-plus" aria-hidden="true"></i>
+	<i class="fa fa-odnoklassniki-square" aria-hidden="true"></i>
+	</div>
+	</div>
+	</form>
+</div>
+</body>
